@@ -26,23 +26,39 @@ please cut-and-paste the text from that email here._
 - Assumptions:
   - ??????
 - Assets:
-  - Confidentiality and privacy (need to disentangle): grades, submissions, student identities
-        In particular, none of the above should be publicly viewable, in particular (student, grade) pairs. A student is not going to want their grades publicly viewable (privacy?), we need to keep submissions confidential to avoid Honor Code type violations, and student identities should be confidential simply because.
-  - Integrity of grades and submissions. We don't want a student changing their grade, or changing their submission after the due date.
-  - Availability of grades would be good to have. We need availability of submissions so I can grade them. Students want availability of grades so they know how well they're doing.
-  - Authenticity of (student, grade, submission) triplets. That is, we don't want a student to be able to "change" their grade by swapping places with someone else.
-
+  - Various properties (AIC, etc.) of:
+    - Grades
+	- Student identities
+	- Submissions
+  - Recall that privacy and confidentiality are related but distinct. Privacy is more at the individual level, while confidentiality is more at the organizational level. So a student would want grade privacy but we'd want grade confidentiality so as to avoid running afoul of applicable confidentiality laws.
+  - Assuming that Regulations mandate confidentiality as follows:
+    - list of students not be publicly viewable. In other words, the general public should not know if Alice is in the class or not.
+	- grades not be viewable to the public nor other students (i.e. Alice can see Alice's grade, but not Bob's). Imagine the uproar otherwise!
+	- submissions not be viewable to the public nor other students
+  - Integrity, as follows:
+    - grades: a student shouldn't be able to change their (or anyone else's) grade. As an example, let's say I graded Alice's submission to be 84/100. She should not be able to change it to be 100/100 in whatever system I'm using to store the grades.
+	  - A student should also not be able to somehow swap two entries in the grade datastructure. That is, Alice should not be able to swap herself and Bob in the grade database in the hopes of getting a better grade.
+	- submission: a student shouldn't be able to change their (or anyone else's) submission. As an example, let's say Alice submitted something on time, but it would deserve only 86/100. She should not be able to update her submission past the due date to get a 100/100 or whatever.
+  - Availability, as follows:
+    - Submissions need to be available so I can grade them
+	- Grades need to be available to the students and the professors, or else there will be complaints. They need to know how well they're doing!
+  - Authenticity, as follows:
+  	- We need to make sure Alice's submission was actually submitted by Alice.
+	  - Of course, we can't guarantee this 100%. But we can have policies that punish Alice if she submits her work on Bob's behalf, and vice versa. This is known as the Honor Code.
+  - Authenticity of (student, grade, submission) triplets. That is, We don't want a student to be able to "change" their grade by swapping places with someone else.
   - explanatory_paragraph ...
 - Threats:
-  - An attacker may seek to raise their grade by any of the following methods:
-        Editing submission after due date
-        Setting or Editing numeric grade value
-        Swapping places with another student, so the other student gets the attacker's grade
-                An attacker can submit under another student's name, but we'd want to prevent this
-  - An attacker may seek to cause chaos by making the grades unavailable, or
-        by deleting all grades or submissions
-  - explanatory_paragraph
-  - explanatory_paragraph ...
+  - Confidentiality/Privacy:
+    - An attacker may seek to see other people's grades. Of course, Alice isn't going to want some arbitrary Bob to see her grade, especially if it's low.
+	- An attacker (or stalker) may seek to see who's in the class
+	- An attacker, perhaps someone due to take the class next year, may seek to see the submissions!
+  - Integrity: An attacker may seek to raise their grade by any of the following methods:
+    - Editing submission after due date
+    - Setting or Editing numeric grade value
+	- An attacker, Alice, may seek to lower their worst enemy, Bob's, grade by sending in a crappy submission while posing as Bob
+  - Availability: An attacker may seek to cause chaos by making the submissions or grades unavailable, or by deleting all grades or submissions
+  - Authenticity:
+    - Alice submitting her work while posing as Bob, so Bob doesn't have to do any work
 - Countermeasures:
   - Permissions system / Login system
   - Tamper-proof submission timestamp via Travis-CI builds (GH commits can be fooled)
