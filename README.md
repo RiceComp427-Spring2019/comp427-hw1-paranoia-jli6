@@ -32,7 +32,8 @@ please cut-and-paste the text from that email here._
   - Lastly, we need to protect the authenticity of submissions and grades. The authenticity of submissions is by assumption. The authenticity of grades, namely that a particular submission was actually graded by the grader, rather than someone else, is also by assumption. Specifically, we assume only the grader (and instructors) have write access to the grading records.
 - Threats:
   - There are several threats to the confidentiality and privacy of student identities, submissions, and grades. If the grading occurs in a room, an attacker could place a camera, microphone, or other bug in the room to obtain information, especially grades. Or an attacker could pull a fire alarm during grading and run into the room and view graded submissions. If all of the class happens to be managed on an insecure analogue of the Canvas LMS, an attacker could simply sniff packets.
-  - An attacker may also seek to violate the integrity of grades and submissions.
+  - An attacker may also seek to violate the integrity of grades and submissions. One could affect submissions by physically entering the grading room and throwing away or changing answers on paper submissions. Another way is by submitting a GitHub commit with a forged timestamp. To change grades on a paper gradebook, an attacker can sneak into the grading room and erase the grader's grade and write in their preferred grade. If grading is digital, an attacker could hack into the digital gradebook and modify the values, possibly by using remote desktop malware on the grader's computer.
+  
 
   - Integrity: An attacker may seek to raise their grade by any of the following methods:
     - Editing submission after due date
