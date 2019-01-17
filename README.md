@@ -31,10 +31,9 @@ please cut-and-paste the text from that email here._
   - The availability of submissions and grades also needs to be protected. If submissions are unavailable, I won't be able to grade them. If grades are unavailable, the students will be displeased. If grades are somehow erased from the system, then there will have been a lot of wasted effort!
   - Lastly, we need to protect the authenticity of submissions and grades. The authenticity of submissions is by assumption. The authenticity of grades, namely that a particular submission was actually graded by the grader, rather than someone else, is also by assumption. Specifically, we assume only the grader (and instructors) have write access to the grading records.
 - Threats:
-  - Confidentiality/Privacy:
-    - An attacker may seek to see other people's grades. Of course, Alice isn't going to want some arbitrary Bob to see her grade, especially if it's low.
-	- An attacker (or stalker) may seek to see who's in the class
-	- An attacker, perhaps someone due to take the class next year, may seek to see the submissions!
+  - There are several threats to the confidentiality and privacy of student identities, submissions, and grades. If the grading occurs in a room, an attacker could place a camera, microphone, or other bug in the room to obtain information, especially grades. Or an attacker could pull a fire alarm during grading and run into the room and view graded submissions. If all of the class happens to be managed on an insecure analogue of the Canvas LMS, an attacker could simply sniff packets.
+  - An attacker may also seek to violate the integrity of grades and submissions.
+
   - Integrity: An attacker may seek to raise their grade by any of the following methods:
     - Editing submission after due date
     - Setting or Editing numeric grade value
