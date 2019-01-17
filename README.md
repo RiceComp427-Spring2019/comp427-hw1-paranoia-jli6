@@ -65,15 +65,19 @@ please cut-and-paste the text from that email here._
   - To ensure authenticity, we can check people's identification and make sure it matches with their tickets and their physical appearance. While these can be forged or disguised in real life, we assume such is not possible because dealing with forgery is more involved.
 
 ## Problem 3
-- Scenario: Your choice (give a brief explanation)
+- Scenario: I am responsible for controlling access to a university's dining hall.
 - Assumptions:
-  - explain_your_assumptions
+  - We assume students are allowed to re-enter the dining hall during the same meal. We also assume locks work as intended, and no attackers have the keys.
 - Assets:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
+  - We want to protect the confidentiality and privacy of the students and their metadata regarding entering the dining hall. Few students would want the whole world to know they went into a certain dining hall at 6:40 PM, for instance.
+  - Availability of the dining hall is also important. By this I mean that the dining hall should be accessible during scheduled hours, even if a prankster wants to change that. Additionally, food and drink, and diningware should be available. If we run out of diningware, how are people going to eat? Students are expected to change the dining hall a little by taking food and drink, but we don't want them to take too much.
+  - We want to protect authenticity in the following way: a student should be who they claim to be. Otherwise, if Alice, who didn't pay the university for dining services, pretends to be Bob, who has a meal plan, then Alice gets free food at the cost of everyone else.
 - Threats:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
+  - If we use electronic scanning machines to look at a student's identification card to see if they have dining hall access, then an attacker could violate confidentiality and privacy by putting a card skimmer on the machines.
+  - An attacker can make the dining hall unavailable by convincing 100 students to take all the plates, forks, spoons, and knives from the dining hall. Other ways to attack availability is by dumping asbestos all over the dining hall grounds, or by bringing in a vuvuzela flash mob.
+  - To attack authenticity on an identification card-based entrance system, two people who look reasonably similar can use the same identification card.
 - Countermeasures:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
+  - To defend against a card skimmer, one can place the machines under lock and key when unsupervised, and periodically manually check for skimmers. Combined with security cameras for evidence gathering, criminal law regarding skimmers serves as a good deterrent against many attackers. The cost of these countermeasures is relatively low, but the potential benefits are high.
+  - To defend against one type of availability attacks, one can look at students leaving the dining hall to see if they are taking excessive food, drink, or diningware. The cost of this depends on implementation. If it's a narrow exit gate with a security guard stationed to inspect students, the cost will be high in terms of student inconvenience. If it's simply employees keeping an eye out, the costs are lower, but the benefits are less, because a student can still get away with taking excessive resources. However, a student can't expect to get away with it forever, so this method would still discourage students, and the benefits should be sufficient enough.
+  - Defending against a vuvuzela flash mob is as simple has having campus police to kick them out. While the response time might be ten minutes, the (marginal) cost is pretty low, and the benefits are good enough. An asbestos attack can be disincentivized by use of security cameras and criminal penalties. A higher-cost deterrent may involve turnstiles and security guards, but most university campuses are safe enough so as to not make these worthwhile.
+  - Countering two people trying to use the same card can be done with fingerprint verification, which is harder to forge, especially when someone is stationed at the entrance watching out for any attack.
