@@ -51,21 +51,12 @@ please cut-and-paste the text from that email here._
   - We also value the stadium's availability. In particular, the stadium needs to be fully capable of hosting a packed game. Parking availability is also an important factor. If there aren't enough available parking spaces, attendance will take a hit.
   - The privacy of stadiumgoers must also be protected. Nobody wants their bathroom activities to be viewable by another person.
   - We also care about authenticity. In particular, we need to make sure whoever enters the stadium is who they claim to be.
-
-  - Confidentiality of: what goes on in the locker room, game plans, team communication equipment, etc. Why? To prevent other team getting an unfair advantage. Confidentiality of attendance identity record sas well.
-  - Integrity of:
-    - The game. No ref manipulation, etc. No streakers. Distracting vuvuzelas and etc. are allowed, because the culture is okaay with it.
-    - The game score. If someone can hack into the scoreboard it would disrupt games.
-	- Humans - protect their integrity, whether their life status or their walllet status
-    	- Human lives
-    	- Human money (e.g. threat of robbery)
-  - Availability: we don't want a prankster to blow up the building and making us look bad and losing revenue . tHE GAME MUST BE PLAYED.
-  - Authenticity: who enters the building is who they really are. Gov't ID system.
-
-  - Human safety, whether from natural factors like building collapse to targeted attacks like terrorism
-  - Revenue
-  - explanatory_paragraph ...
 - Threats:
+  - One could attack confidentiality and privacy in several ways. One way is by placing cameras or other recording devices in various places in the stadium. If it's in the bathroom, it's attacking privacy. If it's in the locker room or wherever on the field the team discusses plays with each other, it's an attack on confidentiality. If the cameras are at the stadium entrances, the attacker will know everybody who's attending the game, which is attack on the stadiumgoers' privacy. Lastly, we want to keep the game confidential, specifically preventing unauthorized viewing of the game in order to protect the stadium revenue.
+  - Integrity can be threatened in several ways. During a game, by eavesdropping on the teams as discussed in confidentiality attacks, a team can gain an unfair advantage. Another possible attack is for a fan with a fan to blow powerful streams of wind at the football, possibly leading to a missed field goal or an incompleted pass. One could also manipulate the game by breaking into the scoreboard and changing the numbers, which even in the best case will disrupt the game. Streakers, throwing projectiles onto the field, or even shooting are other ways to disrupt the game as well.
+  - Another threat to integrity concerns the stadiumgoers' welfare. In particular, people need to be safe from being robbed, injured, or otherwise having their integrity compromised.
+  - There are some threats to availability as well. The night before a big game, a rogue drone operator could dump asbestos all over the seating and the field, which would make the stadium unavailable for quite a while. Other attacks on availability include pranks requiring a stadium closing and people unaffiliated with the games using the parking lot.
+  - There is basically one type of threat to authenticity. One person will pretend to be another. Anybody could pretend to be a coach, player, referee, security guard, custodian, ticket holder, or other personnel in order to gain undeserved privileges. At best, it is simply a fan who will do anything to meet a star player, and at worst, it is somebody who seeks to cause death.
   - Pranks on the stadium before a game (when stadium is empty), which would affect the audience experience
   - Streakers
   - Game manipulation
