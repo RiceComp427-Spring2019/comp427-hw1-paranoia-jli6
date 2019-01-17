@@ -36,8 +36,9 @@ please cut-and-paste the text from that email here._
   - An attacker may also seek to violate the availability of submissions or grades. One way is by accessing the gradebook or submissions and deleting or throwing away everything. Another way is by shutting off the power to and spraying asbestos all over the grading room, ensuring grades for in-paper submissions can't come out until the room is made safe again.
   - Lastly, an attacker Alice may seek to violate authenticity by making a low-quality submission under the name of Bob, or by hiring a friend to make a good submission under the name of Alice.
 - Countermeasures:
-  - To counter an attacker targeting confidentiality, integrity, availability, or authenticity, we can check the grading room for espionage equipment, and restrict access to whatever grading room we use. This includes securing the ceiling to ensure nobody sneaks in through it (this has actually happened before). Auto-closing and auto-locking doors can defend against the fire alarm approach. We can also install security cameras everywhere around the grading room, so any attacker will be more discouraged via prosecution. We can also hire security guards and lock doors as necessary. The gradebook and submissions can be stored under lock and key, to which only the grader will have access. For online systems, we can also use a secure and encrypted service with a proper login system with permissions, and train the grader to not give out their login credentials.
-  - We will need additional countermeasures to defend against the "forged timestamp GitHub commit" attack. One countermeasure is simply for the submission server to record its own time when the submission is made. In the case of COMP 215, this was achieved by using the timestamps of Travis-CI builds.
+  - To counter an attacker targeting confidentiality, integrity, availability, or authenticity, we can store submissions and grades under lock and key to which only the grader would have access, and restrict access to the grading room by the same methods. For online systems, we can also use a secure and encrypted service with a proper login system with permissions, and train the grader to not give out their login credentials. These countermeasures are all low-cost and have decent benefits. At Rice University, these are usually sufficient countermeasures, because there isn't a rampant cheating culture for most classes.
+  - The following countermeasures are more costly, but can confer necessary benefits if we are operating in a situation with a rampant cheating culture. We can check the grading room for espionage equipment, and restrict access to whatever grading room we use. This includes securing the ceiling to ensure nobody sneaks in through it (this has actually happened before). Auto-closing and auto-locking doors can defend against the fire alarm approach. We can also install security cameras and security guards everywhere around the grading room, so any attacker will be more discouraged via prosecution.
+  - We will need additional countermeasures to defend against the "forged timestamp GitHub commit" attack. One countermeasure is simply for the submission server to record its own time when the submission is made. In the case of COMP 215, this was achieved by using the timestamps of Travis-CI builds. This is low-cost and confers decent benefits.
   - A decent countermeasure for protecting authenticity is the combination of names, student IDs, and the Rice University Honor Code. Although this doesn't work 100% of the time, the assumptions take care of the rest.
   
 ## Problem 2
@@ -45,6 +46,7 @@ please cut-and-paste the text from that email here._
 - Assumptions:
   - explain_your_assumptions
 - Assets:
+  -
   - The game
   - The game score
   - Human lives
