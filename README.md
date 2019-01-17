@@ -44,7 +44,7 @@ please cut-and-paste the text from that email here._
 ## Problem 2
 - Scenario: Stadium
 - Assumptions:
-  - We assume the stadium has good build quality and therefore won't collapse under normal conditions. We also assume a car-dominated society, so people attending stadium games will be arriving in their own personal cars.
+  - We assume the stadium has good build quality and therefore won't collapse under normal conditions. We also assume a car-dominated society, so people attending stadium games will be arriving in their own personal cars. We also assume one can't forge identification cards or steal keys. We assume the only people with keys or proper identification are those we can trust to do the right thing. Furthermore, our locks are somehow unpickable, and physical barriers are unbypassable.
 - Assets:
   - We value the confidentiality of a couple things. In order to prevent scandals, we want to ensure fair games by maintaining the confidentiality of team communication and what goes on in the locker room. We also want the attendance records (aside from the amount of people in attendance) a secret.
   - We also value the integrity of several things. We want to protect the integrity of any games the stadium will host. There would be a scandal if people could manipulate the high-profile football games. Additionally, we need to preserve the integrity of the people in attendance. As an example, people can be "modified" by being robbed.
@@ -57,26 +57,12 @@ please cut-and-paste the text from that email here._
   - Another threat to integrity concerns the stadiumgoers' welfare. In particular, people need to be safe from being robbed, injured, or otherwise having their integrity compromised.
   - There are some threats to availability as well. The night before a big game, a rogue drone operator could dump asbestos all over the seating and the field, which would make the stadium unavailable for quite a while. Other attacks on availability include pranks requiring a stadium closing and people unaffiliated with the games using the parking lot.
   - There is basically one type of threat to authenticity. One person will pretend to be another. Anybody could pretend to be a coach, player, referee, security guard, custodian, ticket holder, or other personnel in order to gain undeserved privileges. At best, it is simply a fan who will do anything to meet a star player, and at worst, it is somebody who seeks to cause death.
-  - Pranks on the stadium before a game (when stadium is empty), which would affect the audience experience
-  - Streakers
-  - Game manipulation
-  - Terrorism
-  - Building collapse
-  - Petty crime (e.g. robbery/theft)
-  - Unauthorized persons in general
-  - Unauthorized viewing
-        Drones
-  - explanatory_paragraph
-  - explanatory_paragraph ...
 - Countermeasures:
-  - Ticket system to ensure only authorized persons enter
-  - Policies of penalties for game manipulation
-  - Security cameras
-  - Locking gates and doors
-  - Security guards
-  - Anti-drone equipment
-  - explanatory_paragraph
-  - explanatory_paragraph ...
+  - To prevent the planting of espionage devices, we can restrict access to key parts of the stadium using physical barriers, locked doors and gates. We will ignore the fact that locks can be picked based on our assumption. We can also have entrance security, such as metal detectors or airport-style scanning machines, to ensure no prohibited items are brought in. We can also have maintenance staff periodically check bathrooms and other key areas for hidden cameras. These countermeasures have reasonable cost and have good benefits. Note that an overly invasive scanning protocol could unnecessarily cost fan enjoyment.
+  - To prevent unauthorized viewing of the game, we can "hire" birds or other agents that target unlicensed drones flying above the stadium. Depending on the financial situation, this may not be worth the cost, as drones cannot replicate the experience of being in the middle of an excited crowd.
+  - Protecting the stadiumgoers' welfare can be done by forbidding weapons at the entrance, with entrance security like metal detectors or other scanners to check for them. The degree of scanning again depends on the cost-security calculus at play. Furthermore, there should be a limit on the amount of alcohol each person attending the game can buy, in order to prevent drunken fights. An alcohol tracking system should not be too costly if it relies on an app and every prospective drinker has a smartphone supporting such app, or if it uses handheld scanners, computer vision, and government identification cards. Note that we assume such identification can't be faked.
+  - Protecting availability of the parking lot before and after a game is as easy as having controlled access with a computerized parking entry/exit ticket system, and/or calling tow trucks on cars present during a certain forbidden period. Edge cases, such as a car that won't start, or a woman suddenly in labor, can be addressed by having friendly security guards present as well. Protecting availability of the actual stadium can be achieved by building a reasonably unbreakable fence around the stadium. Fences and parking control and enforcement systems don't seem too expensive, but it is important to not be too eager to tow, else fans will become displeased, which is a longer-term cost itself.
+  - To ensure authenticity, we can check people's identification and make sure it matches with their tickets and their physical appearance. While these can be forged or disguised in real life, we assume such is not possible because dealing with forgery is more involved.
 
 ## Problem 3
 - Scenario: Your choice (give a brief explanation)
