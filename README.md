@@ -36,20 +36,10 @@ please cut-and-paste the text from that email here._
   - An attacker may also seek to violate the availability of submissions or grades. One way is by accessing the gradebook or submissions and deleting or throwing away everything. Another way is by shutting off the power to and spraying asbestos all over the grading room, ensuring grades for in-paper submissions can't come out until the room is made safe again.
   - Lastly, an attacker Alice may seek to violate authenticity by making a low-quality submission under the name of Bob, or by hiring a friend to make a good submission under the name of Alice.
 - Countermeasures:
-  - To counter an attacker targeting availability, we can install security cameras everywhere around the grading room, so any attacker will be more discouraged via prosecution.
+  - To counter an attacker targeting confidentiality, integrity, availability, or authenticity, we can check the grading room for espionage equipment, and restrict access to whatever grading room we use. This includes securing the ceiling to ensure nobody sneaks in through it (this has actually happened before). Auto-closing and auto-locking doors can defend against the fire alarm approach. We can also install security cameras everywhere around the grading room, so any attacker will be more discouraged via prosecution. We can also hire security guards and lock doors as necessary. The gradebook and submissions can be stored under lock and key, to which only the grader will have access. For online systems, we can also use a secure and encrypted service with a proper login system with permissions, and train the grader to not give out their login credentials.
+  - We will need additional countermeasures to defend against the "forged timestamp GitHub commit" attack. One countermeasure is simply for the submission server to record its own time when the submission is made. In the case of COMP 215, this was achieved by using the timestamps of Travis-CI builds.
   - A decent countermeasure for protecting authenticity is the combination of names, student IDs, and the Rice University Honor Code. Although this doesn't work 100% of the time, the assumptions take care of the rest.
-  - Permissions system / Login system
-  - Tamper-proof submission timestamp via Travis-CI builds (GH commits can be fooled)
-  - If submissions are done by email, an "unhackable" "secure" server
-  - If submissions are done on paper, a secure room to store submissions
-        In one case, somebody snuck into an office via social engineering and the ceiling
-  - If grading is done over the web, use HTTPS when:
-        submitting grade values
-        reading submissions
-        basically everything!
-  - explanatory_paragraph
-  - explanatory_paragraph ...
-
+  
 ## Problem 2
 - Scenario: Stadium
 - Assumptions:
