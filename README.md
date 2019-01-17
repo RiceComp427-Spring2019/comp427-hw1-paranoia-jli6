@@ -24,7 +24,7 @@ please cut-and-paste the text from that email here._
 ## Problem 1
 - Scenario: Grading
 - Assumptions:
-  - We have a system where the only people with read access to all submissions and write access to the grading records are the grader and instructors. This system will also be completely inaccessible to people outside of the class. Additionally, this system will also be able to identify the grader such that nobody can impersonate the grader to gain their privileges and access. In this system, submissions can't be changed after the due datetime, and submission datetimes can't be forged. We will also assume each submission was actually submitted by the person whose name or other identifier is indicated on the submission (i.e. Alice didn't submit work under Bob's name).
+  - We have a system where the only people with read access to all submissions and write access to the grading records are the grader and instructors. This system will also be completely inaccessible to people outside of the class. Additionally, this system will also be able to identify the grader such that nobody can impersonate the grader to gain their privileges and access. In particular, we assume the grader won't get phished or be robbed of their physical keys. In this system, submissions can't be changed after the due datetime, and submission datetimes can't be forged. We will also assume each submission was actually submitted by the person whose name or other identifier is indicated on the submission (i.e. Alice didn't submit work under Bob's name).
 - Assets:
   - We want to protect the confidentiality and privacy of several things. The names or identities of students shall remain unknown to everybody except for the grader and instructors. Each student's submissions should not be accessible to anybody except the particular student, the grader, and instructors. Furthermore, each student's grades should not be viewable to anyone except for the particular student, the grader, and instructors. Imagine the uproar if Alice could see Bob's grade!
   - We also want to protect the integrity of grades and submissions. By assumption, submissions can't be changed. And for grades, we want to make sure a student can't change their (or anyone else's) grade.
@@ -40,17 +40,28 @@ please cut-and-paste the text from that email here._
   - The following countermeasures are more costly, but can confer necessary benefits if we are operating in a situation with a rampant cheating culture. We can check the grading room for espionage equipment, and restrict access to whatever grading room we use. This includes securing the ceiling to ensure nobody sneaks in through it (this has actually happened before). Auto-closing and auto-locking doors can defend against the fire alarm approach. We can also install security cameras and security guards everywhere around the grading room, so any attacker will be more discouraged via prosecution.
   - We will need additional countermeasures to defend against the "forged timestamp GitHub commit" attack. One countermeasure is simply for the submission server to record its own time when the submission is made. In the case of COMP 215, this was achieved by using the timestamps of Travis-CI builds. This is low-cost and confers decent benefits.
   - A decent countermeasure for protecting authenticity is the combination of names, student IDs, and the Rice University Honor Code. Although this doesn't work 100% of the time, the assumptions take care of the rest.
-  
+
 ## Problem 2
 - Scenario: Stadium
 - Assumptions:
-  - explain_your_assumptions
+  - We assume the stadium has good build quality and therefore won't collapse under normal conditions. We also assume a car-dominated society, so people attending stadium games will be arriving in their own personal cars.
 - Assets:
-  -
-  - The game
-  - The game score
-  - Human lives
-  - Human money (e.g. threat of robbery)
+  - We value the confidentiality of a couple things. In order to prevent scandals, we want to ensure fair games by maintaining the confidentiality of team communication and what goes on in the locker room. We also want the attendance records (aside from the amount of people in attendance) a secret.
+  - We also value the integrity of several things. We want to protect the integrity of any games the stadium will host. There would be a scandal if people could manipulate the high-profile football games. Additionally, we need to preserve the integrity of the people in attendance. As an example, people can be "modified" by being robbed.
+  - We also value the stadium's availability. In particular, the stadium needs to be fully capable of hosting a packed game. Parking availability is also an important factor. If there aren't enough available parking spaces, attendance will take a hit.
+  - The privacy of stadiumgoers must also be protected. Nobody wants their bathroom activities to be viewable by another person.
+  - We also care about authenticity. In particular, we need to make sure whoever enters the stadium is who they claim to be.
+
+  - Confidentiality of: what goes on in the locker room, game plans, team communication equipment, etc. Why? To prevent other team getting an unfair advantage. Confidentiality of attendance identity record sas well.
+  - Integrity of:
+    - The game. No ref manipulation, etc. No streakers. Distracting vuvuzelas and etc. are allowed, because the culture is okaay with it.
+    - The game score. If someone can hack into the scoreboard it would disrupt games.
+	- Humans - protect their integrity, whether their life status or their walllet status
+    	- Human lives
+    	- Human money (e.g. threat of robbery)
+  - Availability: we don't want a prankster to blow up the building and making us look bad and losing revenue . tHE GAME MUST BE PLAYED.
+  - Authenticity: who enters the building is who they really are. Gov't ID system.
+
   - Human safety, whether from natural factors like building collapse to targeted attacks like terrorism
   - Revenue
   - explanatory_paragraph ...
