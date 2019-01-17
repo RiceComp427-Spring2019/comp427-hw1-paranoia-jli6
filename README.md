@@ -24,29 +24,12 @@ please cut-and-paste the text from that email here._
 ## Problem 1
 - Scenario: Grading
 - Assumptions:
-  - ??????
+  - We have a system where the only people with read access to all submissions and write access to the grading records are the grader and instructors. This system will also be completely inaccessible to people outside of the class. Additionally, this system will also be able to identify the grader such that nobody can impersonate the grader to gain their privileges and access. In this system, submissions can't be changed after the due datetime, and submission datetimes can't be forged. We will also assume each submission was actually submitted by the person whose name or other identifier is indicated on the submission (i.e. Alice didn't submit work under Bob's name).
 - Assets:
-  - Various properties (AIC, etc.) of:
-    - Grades
-	- Student identities
-	- Submissions
-  - Recall that privacy and confidentiality are related but distinct. Privacy is more at the individual level, while confidentiality is more at the organizational level. So a student would want grade privacy but we'd want grade confidentiality so as to avoid running afoul of applicable confidentiality laws.
-  - Assuming that Regulations mandate confidentiality as follows:
-    - list of students not be publicly viewable. In other words, the general public should not know if Alice is in the class or not.
-	- grades not be viewable to the public nor other students (i.e. Alice can see Alice's grade, but not Bob's). Imagine the uproar otherwise!
-	- submissions not be viewable to the public nor other students
-  - Integrity, as follows:
-    - grades: a student shouldn't be able to change their (or anyone else's) grade. As an example, let's say I graded Alice's submission to be 84/100. She should not be able to change it to be 100/100 in whatever system I'm using to store the grades.
-	  - A student should also not be able to somehow swap two entries in the grade datastructure. That is, Alice should not be able to swap herself and Bob in the grade database in the hopes of getting a better grade.
-	- submission: a student shouldn't be able to change their (or anyone else's) submission. As an example, let's say Alice submitted something on time, but it would deserve only 86/100. She should not be able to update her submission past the due date to get a 100/100 or whatever.
-  - Availability, as follows:
-    - Submissions need to be available so I can grade them
-	- Grades need to be available to the students and the professors, or else there will be complaints. They need to know how well they're doing!
-  - Authenticity, as follows:
-  	- We need to make sure Alice's submission was actually submitted by Alice.
-	  - Of course, we can't guarantee this 100%. But we can have policies that punish Alice if she submits her work on Bob's behalf, and vice versa. This is known as the Honor Code.
-  - Authenticity of (student, grade, submission) triplets. That is, We don't want a student to be able to "change" their grade by swapping places with someone else.
-  - explanatory_paragraph ...
+  - We want to protect the confidentiality and privacy of several things. The names or identities of students shall remain unknown to everybody except for the grader and instructors. Each student's submissions should not be accessible to anybody except the particular student, the grader, and instructors. Furthermore, each student's grades should not be viewable to anyone except for the particular student, the grader, and instructors. Imagine the uproar if Alice could see Bob's grade!
+  - We also want to protect the integrity of grades and submissions. By assumption, submissions can't be changed. And for grades, we want to make sure a student can't change their (or anyone else's) grade.
+  - The availability of submissions and grades also needs to be protected. If submissions are unavailable, I won't be able to grade them. If grades are unavailable, the students will be displeased. If grades are somehow erased from the system, then there will have been a lot of wasted effort!
+  - Lastly, we need to protect the authenticity of submissions and grades. The authenticity of submissions is by assumption. The authenticity of grades, namely that a particular submission was actually graded by the grader, rather than someone else, is also by assumption. Specifically, we assume only the grader (and instructors) have write access to the grading records.
 - Threats:
   - Confidentiality/Privacy:
     - An attacker may seek to see other people's grades. Of course, Alice isn't going to want some arbitrary Bob to see her grade, especially if it's low.
